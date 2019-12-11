@@ -67,3 +67,8 @@ axios.delete(`http://127.0.0.1:8000/api/${articleID}`)
         this.forceUpdate()
  ```
  
+ ## 4. [React icon](https://react-icons.netlify.com/#/)
+ ##### npm install react-icons --save
+ 
+ 
+ 
