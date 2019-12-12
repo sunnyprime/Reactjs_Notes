@@ -11,6 +11,7 @@
 
 ## 3. [Axios](https://www.npmjs.com/package/axios)
 ##### npm install axios
+##### npm i axios --save
 [sample](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Axios.md)
 
 
