@@ -3,72 +3,102 @@
 ## 1. For new Projects
 ##### create-react-app projectname
 
-## 2. Router
+## 2. [Router](https://reacttraining.com/react-router/web/guides/quick-start)
 ##### npm i react-router-dom --save
+##### npm install react-router-dom
+[sample](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Router.md)
 
 
 ## 3. [Axios](https://www.npmjs.com/package/axios)
 ##### npm install axios
+##### npm i axios --save
+[sample](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Axios.md)
 
-### Get Request Sample
-```     state = {
-        articles:[]
-    }
 
-    componentDidMount(){
-        axios.get('http://127.0.0.1:8000/api/')
-            .then(res => {
-                this.setState({
-                    articles: res.data
-                })
-                //  console.log(res.data);                 
-            })
-    }
- ```
- 
- ### Post Request sample
- 
- ```
-         axios.post('http://127.0.0.1:8000/rest-auth/login/',{
-            username:"",            
-            password:""})
-            .then(function(response){
-                console.log(response);
-                console.log(response.data);
-                console.log(response.status);
-                console.log(response.statusText);
-                console.log(response.headers);
-                console.log(response.config);                
-            })
-            .catch(function (error) {
-                console.log("erre"+error);
-                console.log(error.response.data);
-                console.log(error.response.status);
-                console.log(error.response.headers);
-              });
-    
-    
-    }
- ```
-    
-### Put Request Sample
-```
- return axios.put(`http://127.0.0.1:8000/api/${articleID}/`,{
-                    title:title,
-                    content:content
-            })
-            .then(res => console.log(res))
-            .catch(err => console.error(err))
-```
-### Delete Request Sample
-```
-axios.delete(`http://127.0.0.1:8000/api/${articleID}`)
-        this.props.history.push('/')
-        this.forceUpdate()
- ```
  
  ## 4. [React icon](https://react-icons.netlify.com/#/)
  ##### npm install react-icons --save
  
  
  
+## Hero Components
+```
+import React from 'react'
+
+export default function Hero({children}) {
+    return (
+        <div className="hero">
+            <div className="banner">
+                <h1>think, code, deploy</h1>
+                <p>embrace your choices - we do</p>
+                {children}
+            </div>
+        </div>
+    )
+}
+
+```
+###### Passing it from other component
+```
+<Hero>
+        <Link to="/products" className="btn btn-primary btn-hero">
+            our products
+        </Link>
+        </Hero>
+```
+
+## git code sample
+##### echo "# budget_calculator" >> README.md
+##### git init
+##### git add README.md
+##### git add .
+##### git commit -m "first commit"
+##### git remote add origin https://github.com/sunnyprime/budget_calculator.git
+##### git push -u origin master
+
+
+## 7. ContextAPI
+##### Sample API code
+
+###### context/Product.js
+```
+import React, { Children, useContext } from 'react'
+export const ProductContext = React.createContext()
+// Provider, Consumer, useContext()
+export default function ProductsProvider({children}) {
+    const greeting = "hello" 
+    const product = {id:1,title:'product name'}
+    return (
+       <ProductContext.Provider value={{greeting,product}}>
+        {children}
+       </ProductContext.Provider>
+    )
+}
+```
+
+###### index.js
+
+```
+import ProductsProvider from "./context/Products"
+
+ReactDOM.render(<ProductsProvider><App /></ProductsProvider>
+, document.getElementById('root'));
+```
+###### using contextproducts using inside pages/products.js
+```
+import React,{useContext} from 'react'
+import {ProductContext} from '../context/Products'
+
+export default function Products() {
+    console.log(React.useContext(ProductContext));
+    const {greeting} = React.useContext(ProductContext)
+
+    
+    return (
+        <div> 
+            Products {greeting}
+        </div>
+    )
+}
+```
+
