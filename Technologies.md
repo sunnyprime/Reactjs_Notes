@@ -1,5 +1,21 @@
 # Technologies in React js
 
+## useHistory
+##### It is used to go to given pages.
+```
+import {useHistory} from 'react-router-dom';
+
+
+const history = useHistory()
+
+<button className="btn btn-primary btn-block" onClick={()=>{addToCart(product); history.push('/cart')}}>add to cart</button>
+```
+
+## Prevent Default
+##### The event.preventDefault() method stops the default action of an element from happening.
+```
+e.preventDefault();
+```
 ## Hook
 
 ###### Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
