@@ -57,7 +57,7 @@ button type="button" className="cart-btn remove-btn" onClick={()=>removeItem(id)
 ```
 <button type="button" className="cart-btn amount-btn"
       onClick={()=>{increaseAmount(id)}}>
-      ```
+```
 
 ##### decrease amount
 ```
@@ -78,7 +78,7 @@ button type="button" className="cart-btn remove-btn" onClick={()=>removeItem(id)
     }
     }
 ```
-<button type="button" className="cart-btn amount-btn" onClick={()=>{decreaseAmount(id,amount)}}>
+
 ```
 <button type="button" className="cart-btn amount-btn" onClick={()=>{decreaseAmount(id,amount)}}>
 ```
