@@ -1,6 +1,6 @@
 # JS_ARRAY
 
-### Array_Sample
+## Array_Sample
 ```
 const items = [
   {name:"Bike", price:100},
@@ -13,7 +13,11 @@ const items = [
 ]
 ---
 ```
-### filter
+## filter
+
+The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+
 ```
 const filteredItem = items.filter((item)=>{
   return item.price <= 100
@@ -54,6 +58,9 @@ map:
 ```
 ---
 ## find
+
+The find() method returns the value of the first element in the provided array that satisfies the provided testing function.
+
 ```
 const foundItem = items.find((item) => {
   return item.name === "Album"
@@ -69,6 +76,10 @@ find:
 ```
 ---
 ## forEach
+
+The forEach() method executes a provided function once for each array element.
+
+
 ```
 items.forEach((item) => {
   console.log(item.price);
@@ -86,6 +97,9 @@ items.forEach((item) => {
 ```
 ---
 ## some
+
+The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.
+
 ```
 const hasInexpensiveItem = items.some((item) => {
   return item.price <= 100
@@ -100,6 +114,9 @@ true
 ```
 ---
 ## every
+
+The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+
 ```
 const total = items.every((item) => {
   return item.price <= 100
@@ -114,14 +131,16 @@ every
 false
 ```
 ---
-### reduce
+## reduce
 The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 The reducer function takes four arguments:
 
-Accumulator (acc)
-Current Value (cur)
-Current Index (idx)
-Source Array (src)
+1. **Accumulator** (acc)
+2. **Current Value** (cur)
+3. **Current Index** (idx)
+4. **Source Array** (src)
+
+
 Your reducer function's returned value is assigned to the accumulator, whose value is remembered across each iteration throughout the array and ultimately becomes the final, single resulting value.
 ```
 const totals = items.reduce((currentTotal, item) =>{
@@ -138,6 +157,9 @@ reduce:
 ```
 ---
 ##  include
+
+The includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+
 ```
 const itemss = [1,2,3,4,5]
 
