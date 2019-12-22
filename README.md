@@ -15,12 +15,27 @@
 [sample](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Axios.md)
 
 
- 
+
  ## 4. [React icon](https://react-icons.netlify.com/#/)
  ##### npm install react-icons --save
- 
- 
- 
+
+ ## 5. [React Context](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Technologies.md)
+
+ ## 6. [React Functions]((https://github.com/sunnyprime/Reactjs_Notes/blob/master/Functions.md)
+
+## 7. Hidden API_Key Integration with Github [underprocess]
+1. create file .env.development parallel to -gitignore
+```
+REACT_APP_API_KEY =---[your key]---
+```
+2.Add command to gitignore
+```
+.env.development
+```
+3. Use your key as
+```
+ const url = `https://www.food2fork.com/api/get?key=${process.env.REACT_APP_API_KEY}&rId=${this.state.id}`;
+```
 ## Hero Components
 ```
 import React from 'react'
@@ -47,58 +62,11 @@ export default function Hero({children}) {
         </Hero>
 ```
 
-## git code sample
-##### echo "# budget_calculator" >> README.md
-##### git init
-##### git add README.md
-##### git add .
-##### git commit -m "first commit"
-##### git remote add origin https://github.com/sunnyprime/budget_calculator.git
-##### git push -u origin master
 
+---
 
-## 7. ContextAPI
-##### Sample API code
+## [Github commands](https://github.com/sunnyprime/Reactjs_Notes/blob/master/github.md)
 
-###### context/Product.js
-```
-import React, { Children, useContext } from 'react'
-export const ProductContext = React.createContext()
-// Provider, Consumer, useContext()
-export default function ProductsProvider({children}) {
-    const greeting = "hello" 
-    const product = {id:1,title:'product name'}
-    return (
-       <ProductContext.Provider value={{greeting,product}}>
-        {children}
-       </ProductContext.Provider>
-    )
-}
-```
+## [JavScript Array](https://github.com/sunnyprime/Reactjs_Notes/blob/master/javascript_array.md)
 
-###### index.js
-
-```
-import ProductsProvider from "./context/Products"
-
-ReactDOM.render(<ProductsProvider><App /></ProductsProvider>
-, document.getElementById('root'));
-```
-###### using contextproducts using inside pages/products.js
-```
-import React,{useContext} from 'react'
-import {ProductContext} from '../context/Products'
-
-export default function Products() {
-    console.log(React.useContext(ProductContext));
-    const {greeting} = React.useContext(ProductContext)
-
-    
-    return (
-        <div> 
-            Products {greeting}
-        </div>
-    )
-}
-```
-
+## [JSON](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Json.md)
