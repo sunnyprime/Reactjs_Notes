@@ -98,6 +98,8 @@ button type="button" className="cart-btn remove-btn" onClick={()=>removeItem(id)
     }
 
 ```
+<button className="btn btn-primary btn-block" onClick={()=>{addToCart(product); history.push('/cart')}}>add to cart</button>
+```
 ##### clear cart
 ```
     const clearCart = () => {
@@ -128,7 +130,8 @@ const userLogin = user => {
     }
 
 ```
-
+```
+```
 ##### User logout
 ```
 const userLogout = () => {
@@ -150,3 +153,48 @@ const hideAlert = () => {
     setAlert({...alert,show: false})
 }
 ```
+##### handleSubmit
+```
+const toggleMember = () => {
+        setIsMember(prevMember => {
+            let isMember = !prevMember
+            isMember ? setUsername("default") : setUsername("")
+            return isMember
+        })
+    }
+
+    const handleSubmit = async e => {
+        showAlert({
+            msg:"accessing user data. please wait....."
+        })
+        // alert
+        e.preventDefault();
+        // console.log("submit");
+
+        let response
+        if(isMember){
+            response = await loginUser({email,password})
+        }
+        else{
+            response = await registerUser({email, password, username})
+        }
+        if(response){
+            // console.log("success");
+            // console.log(response);
+            const {jwt: token, user: { username }} = response.data
+            const newUser = {token,username}
+            // console.log(newUser);            
+            userLogin(newUser)
+            showAlert({
+                msg: `you are logged in: ${username}. shop away my friend`})
+                history.push("/products")
+            }
+            else {
+                showAlert({msg:"there was an error. please try again",
+            type:"danger"});
+            }
+
+                    // show alert        
+    }
+  ```
+  
