@@ -62,3 +62,49 @@ const {products} = React.useContext(ProductContext)
 
 const {imageurl,title,price,Description} = product
 ```
+
+
+## 7. ContextAPI
+##### Sample API code
+
+###### context/Product.js
+```
+import React, { Children, useContext } from 'react'
+export const ProductContext = React.createContext()
+// Provider, Consumer, useContext()
+export default function ProductsProvider({children}) {
+    const greeting = "hello"
+    const product = {id:1,title:'product name'}
+    return (
+       <ProductContext.Provider value={{greeting,product}}>
+        {children}
+       </ProductContext.Provider>
+    )
+}
+```
+
+###### index.js
+
+```
+import ProductsProvider from "./context/Products"
+
+ReactDOM.render(<ProductsProvider><App /></ProductsProvider>
+, document.getElementById('root'));
+```
+###### using contextproducts using inside pages/products.js
+```
+import React,{useContext} from 'react'
+import {ProductContext} from '../context/Products'
+
+export default function Products() {
+    console.log(React.useContext(ProductContext));
+    const {greeting} = React.useContext(ProductContext)
+
+
+    return (
+        <div>
+            Products {greeting}
+        </div>
+    )
+}
+```
