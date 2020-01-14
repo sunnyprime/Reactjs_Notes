@@ -70,3 +70,11 @@ export default function Hero({children}) {
 ## [JavScript Array](https://github.com/sunnyprime/Reactjs_Notes/blob/master/javascript_array.md)
 
 ## [JSON](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Json.md)
+
+## REDUX
+```
+npm install redux react-redux
+```
+```
+npm install redux-thunk
+```
