@@ -13,12 +13,12 @@ data=JSON.stringify(data)
 #### This convert stringjson to json object
 
 ```
-local_data=JSON.parse(local_data)
+data=JSON.parse(data)
 ```
 ---
 
 # Local Storage
-
+#### 10MB
 ### Saving
 
 ```
@@ -38,7 +38,8 @@ localStroage.removeItem("Key")
 ```
 ---
 
-# Cookies
+# Cookies 
+#### size=4096 Bytes
 
 #### It contains "NAME","VALUE","PATH","EXPIRES/MAX-AGE","SITES","HTTP ONLY","SECURE","SAMESITES"
 
@@ -62,8 +63,15 @@ document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; p
 document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 ```
 ---
-# Session
+# Session ??
+### size=5 MB
+
+### Adding
 
 ```
-var x = document.cookie
+
+```
+### Removing
+```
+
 ```
