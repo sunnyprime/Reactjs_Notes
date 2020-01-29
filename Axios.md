@@ -40,6 +40,45 @@
     
     }
  ```
+ #### POST with asyn await and try catch and redux
+ ```
+ const body ={
+        username,
+        email,
+        password
+    }
+    
+
+    try {          
+        
+        const res= await axios.post("http://localhost:1337/auth/local/register",body)      
+        
+        // console.log(res.data);
+        
+        dispatch({
+            type:REGISTER_SUCCESS,
+            payload:res.data
+        })
+        // dispatch(loadUser())
+    }
+    catch(err){
+               
+        var errors = err.response.data.errors
+        if (errors===undefined)
+        {
+            errors = err.response.data.error
+        }
+        // console.log(errors);               
+        
+        if (errors) {       
+            dispatch(setAlert(errors,"danger"))
+        }
+        dispatch({
+            type:REGISTER_FAIL
+        })
+
+    }
+```
     
 ### Put Request Sample
 ```
