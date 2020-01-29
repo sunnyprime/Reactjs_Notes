@@ -18,7 +18,10 @@
 
  ## 4. [React icon](https://react-icons.netlify.com/#/)
  ##### npm install react-icons --save
-
+ ```
+ import {FaAngleUp,FaAngleDown} from 'react-icons/fa'
+ <FaAngleUp />
+ ```
  ## 5. [React Context](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Technologies.md)
 
  ## 6. [React Functions]((https://github.com/sunnyprime/Reactjs_Notes/blob/master/Functions.md)

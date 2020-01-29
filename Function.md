@@ -6,6 +6,19 @@ if isEmpty the display that
            <p className="form-empty">please fill out all form fields</p>
        )}
 ```
+
+### Annonimus function over button
+
+```
+onClick={() => {console.log("item removed")}}
+```
+
+### Using url JSON Formatter
+```
+const {id,image:{url},title,price} = product
+const newItem = { id, image:url, title, price, amount: 1 }
+```
+---
 ## Ecommerce Functions
 
 
@@ -197,4 +210,3 @@ const toggleMember = () => {
                     // show alert        
     }
   ```
-  

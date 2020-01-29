@@ -16,6 +16,18 @@ const history = useHistory()
 ```
 e.preventDefault();
 ```
+
+### param
+```
+import {useParams} from 'react-router-dom';
+const { id } = useParams()
+const product = products.find(item => item.id === parseInt(id))
+const {imageurl,title,price,Description} = product
+```
+
+
+---
+
 ## Hook
 
 ###### Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
@@ -29,6 +41,9 @@ const products = flattenProducts(response.data)
 setProducts(products)
 setLoading(false)
 
+```
+## useEffect
+```
 ```
 
 ## Context
