@@ -81,3 +81,82 @@ npm install redux react-redux
 ```
 npm install redux-thunk
 ```
+## [Form Validation](https://www.w3resource.com/javascript/form/password-validation.php)
+```
+import React,{useState} from 'react'
+
+export default function Register() {
+    const [formData,setFormData] = useState({
+        username:"",
+        email:"",
+        password:""
+    })
+    const [validate,setValidate] = useState({
+        usernameError:"",
+        emailError:"",
+        passwordError:""
+    })
+    const {username,email,password} = formData
+    const onChange = e =>{
+setFormData({ ...formData,[e.target.name]: e.target.value})}
+const onSubmit = async e =>{
+    e.preventDefault();
+    setValidate({usernameError:"",emailError:"",passwordError:""})
+    
+    if(!username){
+        setValidate({usernameError:"Please enter the username"})
+        }
+        // email.includes("@")
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!email.match(mailformat)){
+        setValidate({emailError:"Please enter the email address"})}
+
+    if(email===""){
+           setValidate({emailError:"Please enter the email"})
+    }
+
+    if(!password){
+        setValidate({passwordError:"Please enter the Password"})
+    }
+    var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+    if(!password.match(paswd)){
+        setValidate({passwordError:"Please enter the correct Password"})
+    }
+    
+    
+    
+    // console.log(formData);
+}
+const {usernameError,emailError,passwordError} = validate
+
+    return (
+        <div>
+            <h1>Register</h1>
+            <form onSubmit={e=>onSubmit(e)}>
+                <label>Usename:</label><br/>
+                <input type="username" placeholder="Username" 
+                value={username} name="username" onChange={e => onChange(e)}></input>
+                <br/>
+                {usernameError ? (
+                <p style={{fontSize:12,color:"red"}}>{usernameError} </p>
+               ) : null}
+                <label>Email:</label><br/>
+                <input type="username" placeholder="Email" 
+                value={email} name="email" onChange={e => onChange(e)}></input>
+                <br/>
+                {emailError ? (
+                <p style={{fontSize:12,color:"red"}}>{emailError} </p>):null}
+                <br></br>
+                <label>Password:</label><br/>
+                <input type="password" placeholder="Password" 
+                value={password} name="password" onChange={e => onChange(e)}></input>
+                <br></br>
+                {passwordError ? (
+                <p style={{fontSize:12,color:"red"}}>{passwordError} </p>) :null}
+                <input type="submit" />
+            </form>
+        </div>
+    )
+}
+
+```
