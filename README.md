@@ -21,7 +21,7 @@
 
  ## 5. [React Context](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Technologies.md)
 
- ## 6. [React Functions](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Functions.md)
+ ## 6. [React Functions](https://github.com/sunnyprime/Reactjs_Notes/blob/master/Function.md)
 
 ## 7. Hidden API_Key Integration with Github [underprocess]
 1. create file .env.development parallel to -gitignore
