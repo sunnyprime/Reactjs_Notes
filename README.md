@@ -160,3 +160,26 @@ const {usernameError,emailError,passwordError} = validate
 }
 
 ```
+
+## Pagination
+```
+function pagination(arr){
+var itemPerPage= 5
+var newarray=[]
+var flagarray = []
+const newarr = arr.map((item,index)=>{
+flagarray =[...flagarray,item]
+if(flagarray.length===itemPerPage){
+  newarray = [...newarray,flagarray]
+  flagarray=[]
+}
+if(index===arr.length-1){
+  if(flagarray==[]){
+    console.log("indi");
+  }
+  console.log(flagarray);
+  newarray = [...newarray,flagarray]
+}})
+return newarray
+}
+```
