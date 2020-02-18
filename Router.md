@@ -47,3 +47,11 @@ import {BrowserRouter as Router,Switch, Route} from "react-router-dom";
     </ProductsProvider>    
 </Fragment>
 ```
+
+#### Link
+```
+import {Link,NavLink} from 'react-router-dom'
+
+<Link to="/store" className="navbar-icon mx-2 navbar-cart-icon">
+```
+
