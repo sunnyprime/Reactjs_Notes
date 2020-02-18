@@ -1,5 +1,50 @@
 # Technologies in React js
 
+## Context 
+```
+import React from 'react';
+import axios from 'axios'
+import {imagearray} from "./Utils"
+
+export const Userdata = React.createContext();
+
+
+export default function Context({ children }) {
+    var [loading, setLoading] = React.useState(true)
+    const [home,sethome] = React.useState()
+    const [image,setimage] = React.useState()
+    const [reacts,setreacts] = React.useState()
+    const [javascript,setjavascript] = React.useState()
+    const [css,setcss] = React.useState()
+    React.useEffect(() => {    
+        setLoading(true)
+        axios
+        .get(`http://localhost:1337/homes`)
+        .then(response => 
+            {
+            const data = response.data                    
+            sethome(data)
+            
+            setimage(imagearray(data))
+            
+            }
+            );
+        return () => {}
+    } ,[])
+
+
+    
+    
+    
+  return (
+         <Userdata.Provider value={{loading,home,image,reacts,javascript,css}}>
+             {children}
+         </Userdata.Provider>
+      )
+  }
+ 
+```
+
 ## useHistory
 ##### It is used to go to given pages.
 ```
