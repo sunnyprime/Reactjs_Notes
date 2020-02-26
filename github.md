@@ -11,8 +11,7 @@ Add file to index
 commit change in index
 ##### git remote add origin https://github.com/sunnyprime/budget_calculator.git
 ##### git push -u origin master
-##### git status
-check status of working tree
+##### git status => check status of working tree
 ---
 ##### git log
 ##### git show-branch
