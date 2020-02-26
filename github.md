@@ -20,3 +20,10 @@ commit change in index
 ##### git diff master issue01 =>  give the defference of different brances
 ##### git merge issue01
 ##### git clone url
+---
+##### git clone url
+##### pm2 stop all
+##### git checkout -- .
+##### git checkout tasks-tab
+##### git pull
+##### rm -rf node_modules/
