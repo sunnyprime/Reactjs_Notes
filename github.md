@@ -14,10 +14,10 @@ commit change in index
 ##### git status
 check status of working tree
 ---
-git log
-git show-branch
-git checkout master => move to other branch
-git branch isssue01 => new branch created
-git diff master issue01 =>  give the defference of different brances
-git merge issue01
-git clone url
+##### git log
+##### git show-branch
+##### git checkout master => move to other branch
+##### git branch isssue01 => new branch created
+##### git diff master issue01 =>  give the defference of different brances
+##### git merge issue01
+##### git clone url
