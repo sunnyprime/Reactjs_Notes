@@ -184,3 +184,7 @@ if(index===arr.length-1){
 return newarray
 }
 ```
+###### Show error list
+```
+npm install build-tools  -g
+```
