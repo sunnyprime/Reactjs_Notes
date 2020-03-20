@@ -18,6 +18,18 @@ const Exp = (): JSX.Element => {
 
 export default LoginProtectorHOC(Exp);
 ```
+```
+import React from 'react';
+
+
+export default function Index(): JSX.Element {
+    return (
+        <div>
+           test
+        </div>
+    );
+}
+```
 
 ### ClassBased
 ```
