@@ -1,5 +1,5 @@
 # Github Code
-
+export PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin"
 ## git code sample
 ##### echo "# budget_calculator" >> README.md
 ##### git init
