@@ -1,4 +1,6 @@
 # Django
+## [Django Doc](https://docs.djangoproject.com/en/3.0/)
+
 
 ## Create New Project
 ```
@@ -20,4 +22,10 @@ python manage.py runserver
 python manage.py migrate
 python manage.py makemigration
 ```
+
+## Super user
+```
+python manage.py createsuperuser
+```
+
 
