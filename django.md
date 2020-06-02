@@ -1,5 +1,6 @@
 # Django
 ## [Django Doc](https://docs.djangoproject.com/en/3.0/)
+## [graphen python](https://graphene-python.org/)
 
 
 ## Create New Project
@@ -26,6 +27,18 @@ python manage.py makemigration
 ## Super user
 ```
 python manage.py createsuperuser
+```
+
+# Graphql
+
+## 1 Simaple query
+```
+query {
+  allMovies{
+    title,
+    year
+  }
+}
 ```
 
 
