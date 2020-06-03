@@ -1,6 +1,12 @@
 # Django
 ## [Django Doc](https://docs.djangoproject.com/en/3.0/)
 ## [graphen python](https://graphene-python.org/)
+## [django graphql](https://django-graphql-jwt.domake.io/en/stable/)
+
+## pip Installation
+```
+pip install django-graphql-jwt
+```
 
 
 ## Create New Project
@@ -272,6 +278,51 @@ query AllMovies{
     id
     title
     year
+  }
+}
+```
+## Update Mutation
+```
+# 12 Mutation 
+
+mutation UpdateMovie{
+  updateMovie(id:6, title: "Test" , year:2017) {
+    movie{
+      id
+      title
+      year
+    }
+  }
+}
+
+query AllMovies{
+  allMovies{
+    id
+    title
+    year
+  }
+}
+```
+
+## Delete Mutation
+```
+mutation DeleteMovie{
+  deleteMovie(id:6) {
+    movie{
+      id
+      title
+      year
+    }
+  }
+}
+```
+
+## JWT
+```
+# 13 JWT
+mutation {
+  tokenAuth(username:"sunnyprime", password:"test12345"){
+    token
   }
 }
 ```
