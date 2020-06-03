@@ -83,4 +83,88 @@ class Query(graphene.ObjectType):
         return None
 ```
 
+## Graphql Query basic
+```
+# 1
+query {
+  allMovies{
+    id,
+    title,
+    year,    
+  }
+}
 
+# 2
+query {
+  movie(id:2){
+    title,
+    year
+  }
+}
+
+# 3
+query {
+  movie(title:"Avenger"){
+    title,
+    year
+  }
+}
+
+# 4
+query {
+  allMovies {
+    id
+    title
+    year
+    movieAge
+  }
+}
+
+# 5
+query {
+  allMovies {
+    id
+    title
+    year
+    movieAge
+    director {
+      name
+      surname
+    }
+  }
+}
+
+# 6
+query {
+  allDirectors{
+    name
+    surname
+  }
+}
+
+# 7
+query {
+  firstMovie: movie(id:1) {
+    id
+    title
+    year
+    movieAge
+    director {
+      name
+      surname
+    }
+  }
+   secondMovie: movie(id:2) {
+    id
+    title
+    year
+    movieAge
+    director {
+      name
+      surname
+    }
+  }
+}
+
+
+```
