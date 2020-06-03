@@ -166,5 +166,91 @@ query {
   }
 }
 
+# 8
+query {
+  firstMovie: movie(id:1) {
+   ...movieData
+  }
+   secondMovie: movie(id:2) {
+   ...movieData
+  }
+}
+
+fragment movieData on MovieType {
+  id
+  title
+}
+
+# 9 Names
+query MoviesAndDirectors {
+  allMovies {
+    title
+    year
+    director {
+      surname
+    }
+  }
+}
+
+query JustMovies {
+  allMovies{
+    title
+    year
+  }
+}
 
 ```
+```
+# 10 Variable
+query MovieAndDirector($id: Int) {
+  movie(id: $id){
+    id
+    title
+    director{
+      surname
+    }
+  }
+}
+------------
+{
+  "id": 2
+}
+```
+```
+# 11 directive
+query MovieAndDirector($id: Int,$showdirector: Boolean = false) {
+  movie(id: $id){
+    id
+    title
+    year
+    director @skip(if: $showdirector){
+      surname
+    }
+  }
+}
+-----
+Query variable:
+{
+  "id": 2
+}
+```
+
+```
+# 11 directive
+query MovieAndDirector($id: Int,$showdirector: Boolean = true) {
+  movie(id: $id){
+    id
+    title
+    year
+    director @include(if: $showdirector){
+      surname
+    }
+  }
+}
+---------
+{
+  "id": 2,
+  "showdirector": true
+}
+```
+
