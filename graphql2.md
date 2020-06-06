@@ -17,4 +17,5 @@ pipenv shell
 pipenv install django graphene-django django-graphql-jwt django-cors-headers
 pipenv install --dev autopep8
 django-admin startproject app
+python manage.py startapp tracks
 ```
