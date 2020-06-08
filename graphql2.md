@@ -1,5 +1,6 @@
 # GRAPHQL 2
 
+### [JWT](https://github.com/flavors/django-graphql-jwt)
 
 ## VirualEnv and Graphene
 
