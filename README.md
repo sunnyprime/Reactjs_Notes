@@ -1,6 +1,7 @@
 # Reactjs_Notes
 ## 0. [TypeScript](https://github.com/sunnyprime/Reactjs_Notes/blob/master/TypeScript.md)
 
+## .5 [JuniorToSnior](https://github.com/sunnyprime/Reactjs_Notes/blob/master/JuniorToSenior.md)
 ## 1. For new Projects
 ##### create-react-app projectname
 
