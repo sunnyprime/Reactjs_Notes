@@ -1,5 +1,7 @@
 # Junior To Senior
 
+## [Create-react-app-cheatsheet](https://create-react-app.dev/docs/running-tests)
+
 ## SSH
 
 ## Performance Part 1
