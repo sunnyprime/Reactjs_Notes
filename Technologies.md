@@ -170,6 +170,7 @@ export default function Products() {
 ```
 # Focusable modal
 
+```
 import React, { createContext, useContext, useEffect, createRef } from "react";
 import { createPortal } from "react-dom";
 
@@ -255,3 +256,4 @@ Modal.Footer.CloseBtn = function CloseBtn(props) {
     />
   );
 };
+```
